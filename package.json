@@ -1,0 +1,12 @@
+{
+  "name": "upload-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pnpm -C ./packages/upload-client dev"
+  },
+  "author": "",
+  "license": "ISC"
+}
