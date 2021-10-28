@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pnpm -C ./packages/upload-client dev"
+    "start": "pnpm -C ./packages/upload-client dev",
+    "lint:client": "pnpm -C ./packages/upload-client/ lint"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "prettier": "^2.4.1"
+  }
 }

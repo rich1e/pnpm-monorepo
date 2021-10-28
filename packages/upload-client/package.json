@@ -1,18 +1,33 @@
 {
   "name": "@upload/client",
   "version": "0.0.0",
+  "description": "图片上传 Client",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts src/*",
+    "fix": "eslint --ext .js,.jsx,.ts src/* --fix"
   },
+  "author": "yuqigong@outlook.com",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
+    "@tinymce/tinymce-vue": "^4",
+    "axios": "^0.24.0",
+    "tinymce": "^5.10.0",
     "vue": "^3.2.16"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "@vitejs/plugin-vue": "^1.9.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.20.0",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
+    "vue-eslint-parser": "^8.0.0",
     "vue-tsc": "^0.3.0"
   }
 }
