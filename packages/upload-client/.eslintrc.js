@@ -3,7 +3,7 @@ module.exports = {
   root: true,
   // 全局环境
   env: {
-    node: true
+    node: true,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -21,13 +21,16 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier'
+    'prettier',
+    'plugin:prettier/recommended',
   ],
   rules: {
     // override/add rules settings here, such as:
-		'@typescript-eslint/no-explicit-any': 'off',
-    'vue/script-setup-uses-vars': 'error',
+    'prettier/prettier': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    // 'vue/script-setup-uses-vars': 'error',
     'vue/no-v-html': 'off',
-    'vue/comment-directive': 'off'
-  }
+    'vue/comment-directive': 'off',
+    'vue/max-attributes-per-line': ['off'],
+  },
 }
