@@ -8,7 +8,7 @@ import { ref } from 'vue'
 const editorRef: any = ref({})
 const editorVal = ref('')
 const textArea = ref('')
-const contentHtml = editorRef && editorRef.contentValue || ''
+const contentHtml = editorRef.value && editorRef.value.contentValue || ''
 
 const submitHandler = (event: any) => {
   console.log(editorVal.value)
@@ -41,7 +41,7 @@ const cleanHandler = () => {
       <div style="overflow: auto; height: 80px; border: 1px dashed darkmagenta; padding: 3px;" v-html="contentHtml"></div>
       <p>提交内容：</p>
       <form>
-        <textarea style="width: 99%; height: 120px;" v-model="textArea"></textarea>
+        <textarea v-model="textArea" style="width: 99%; height: 120px;"></textarea>
         <button type="submit" @click="submitHandler">提交</button>
         <button type="reset" style="margin-left: 10px;" @click="cleanHandler">清空</button>
       </form>
